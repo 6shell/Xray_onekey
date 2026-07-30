@@ -100,9 +100,19 @@ https://www.dmit.io/aff.php?aff=3957
 
 https://www.vultr.com/?ref=6881279
 
+با خرید vps
+
+https://nube.sh/invite/5986088028ENM0
+
+با خرید پروکسی
+
+https://app.proxy-cheap.com/r/Pbqf9l
+
+https://iproyal.cn/?r=249487
+
 حمایت با رمزارز
 
-TRC20:TFannfnajNGYsMTuVDcXfZXXPbcaxAEffa
+TRC20:TU8mLTPfa5Y9nmszyfyt2VRAtuZhdLexL8
 
 
 ## Stargazers over time
