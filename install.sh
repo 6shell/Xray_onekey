@@ -1033,6 +1033,21 @@ function basic_ws_information() {
   ws_link
 }
 
+# 赞助商与 AFF 展示，用于菜单头部与安装收尾。文案真源是 README.MD 的
+# 「❤️ 赞助商」与「支持这个项目」两节，改动时请一并同步（xray_docker 各 README 亦同）。
+# 刻意不放进 basic_information：菜单 23 查看配置链接时不应跟着展示推广。
+function show_support() {
+  echo -e "\n${Blue}──────────────────── 支持本项目 ────────────────────${Font}"
+  echo -e "${Yellow}赞助商${Font} CapybaraCode  AI 编码 / Claude Code API 中转"
+  echo -e "                     优惠码 WULABING 额外送 4 美元额度"
+  echo -e "                     https://api.capybaracode.cc/register?aff=ENZE8PZ2VBDE"
+  echo -e "${Yellow}赞助商${Font} UHDNOW        4K / IMAX 原盘 Emby 私服，多线路直连"
+  echo -e "                     https://www.uhdnow.com/signup?invite=IMAX4K"
+  echo -e "${Yellow}服务器 AFF${Font}           搬瓦工 · DMIT · Nube.sh · Vultr（详见 README）"
+  echo -e "${Yellow}USDT  TRC20${Font}          TU8mLTPfa5Y9nmszyfyt2VRAtuZhdLexL8"
+  echo -e "${Blue}────────────────────────────────────────────────────${Font}"
+}
+
 function show_access_log() {
   [ -f ${xray_access_log} ] && tail -f ${xray_access_log} || echo -e "${RedBG}log 文件不存在${Font}"
 }
@@ -1096,6 +1111,7 @@ function install_xray() {
   config_check
   restart_all
   basic_information
+  show_support
 }
 function install_xray_ws() {
   is_root
@@ -1115,13 +1131,16 @@ function install_xray_ws() {
   config_check
   restart_all
   basic_ws_information
+  show_support
 }
 menu() {
   update_sh
   shell_mode_check
   echo -e "\t Xray 安装管理脚本 ${Red}[${shell_version}]${Font}"
   echo -e "\t---authored by wulabing---"
-  echo -e "\thttps://github.com/wulabing\n"
+  echo -e "\thttps://github.com/wulabing"
+  show_support
+  echo
 
   echo -e "当前已安装版本：${shell_mode}"
   echo -e "—————————————— 安装向导 ——————————————"""
